@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mainwindow</class>
+ <widget class="QMainWindow" name="mainwindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1906</width>
+    <height>990</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MoveEco</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(227, 227, 227);</string>
+  </property>
+  <property name="animated">
+   <bool>true</bool>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QStackedWidget" name="stacked_widget">
+    <property name="geometry">
+     <rect>
+      <x>-10</x>
+      <y>0</y>
+      <width>1921</width>
+      <height>1021</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <widget class="QWidget" name="page">
+     <widget class="QLabel" name="label_destination_3">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>70</y>
+        <width>161</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold Condensed</family>
+        <pointsize>28</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);
+border-radius: 20px;
+padding: 6px;
+padding-bottom: 40px
+</string>
+      </property>
+      <property name="text">
+       <string>Set Route</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="button_cost">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>580</y>
+        <width>331</width>
+        <height>171</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold</family>
+        <pointsize>28</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="mouseTracking">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton#button_cost {
+    background-color: rgb(255, 255, 255);
+    border-width: 5px;
+	border-style: solid;
+    border-radius: 40px;
+    border-color:  rgb(18, 136, 73);
+    min-width: 10em;
+    padding: 6px;
+}
+QPushButton#button_cost:pressed {
+	border-color: rgb(255, 170, 0)
+}
+</string>
+      </property>
+      <property name="text">
+       <string>SAVER</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="button_eco">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>580</y>
+        <width>331</width>
+        <height>171</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold</family>
+        <pointsize>28</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton#button_eco {
+    background-color: rgb(255, 255, 255);
+    border-width: 5px;
+	border-style: solid;
+    border-radius: 40px;
+    border-color: rgb(18, 136, 73);
+    min-width: 10em;
+    padding: 6px;
+}
+QPushButton#button_eco:pressed {
+	background-color: rgb(18, 136, 73);
+	border-color: rgb(255, 255, 255);	
+}</string>
+      </property>
+      <property name="text">
+       <string>ECO </string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_destination">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>270</y>
+        <width>211</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold Condensed</family>
+        <pointsize>36</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 189, 92);</string>
+      </property>
+      <property name="text">
+       <string>DESTINATION</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="line_edit_destination">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>270</y>
+        <width>841</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift Light SemiCondensed</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QLineEdit {
+
+     border-radius: 10px;
+     padding: 0 8px;
+	 background-color: white;
+     selection-background-color: white;
+ }
+
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="frame">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPlainTextEdit" name="output_box">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>1280</x>
+        <y>240</y>
+        <width>561</width>
+        <height>451</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Cascadia Code SemiLight</family>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(230, 230, 230);
+
+    border-top: none;           /* No border on top */
+    border-left: none;          /* No border on left */
+    border-right: none;         /* No border on right */
+    border-bottom-left-radius: 10px;  /* Curved bottom-left */
+    border-bottom-right-radius: 10px; /* Curved bottom-right */
+    padding: 5px 2px;  </string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_start">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>190</y>
+        <width>131</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold Condensed</family>
+        <pointsize>36</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 189, 92);</string>
+      </property>
+      <property name="text">
+       <string>START</string>
+      </property>
+     </widget>
+     <widget class="QPlainTextEdit" name="heading_box">
+      <property name="geometry">
+       <rect>
+        <x>1280</x>
+        <y>40</y>
+        <width>561</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift Light SemiCondensed</family>
+        <pointsize>36</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(230, 230, 230);
+
+    border-bottom: none;         /* No border on bottom */
+    border-left: none;           /* No border on left */
+    border-right: none;          /* No border on right */
+    border-top-left-radius: 10px;   /* Curved top-left */
+    border-top-right-radius: 10px;  /* Curved top-right */
+    padding: 5px 10px;  </string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_destination_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>500</y>
+        <width>191</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold Condensed</family>
+        <pointsize>28</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);
+border-radius: 20px;
+padding: 6px;
+padding-bottom: 40px
+</string>
+      </property>
+      <property name="text">
+       <string>Choose Mode</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="line_edit_start">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>180</y>
+        <width>841</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift Light SemiCondensed</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QLineEdit {
+     border-radius: 10px;
+     padding: 0 8px;
+	background-color: white;
+     selection-background-color: white;
+ }
+
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="frame">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="button_fastest">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>760</x>
+        <y>580</y>
+        <width>331</width>
+        <height>171</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold</family>
+        <pointsize>28</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton#button_fastest {
+    background-color: rgb(255, 255, 255);
+    border-width: 5px;
+	border-style: solid;
+    border-radius: 40px;
+    border-color:  rgb(18, 136, 73);
+    min-width: 10em;
+    padding: 6px;
+}
+QPushButton#button_fastest:pressed {
+	border-color: rgb(255, 170, 0)
+}
+</string>
+      </property>
+      <property name="text">
+       <string>SPEED</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>550</y>
+        <width>1121</width>
+        <height>231</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 189, 92);
+ border-radius: 10px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>-70</x>
+        <y>120</y>
+        <width>1191</width>
+        <height>271</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> border-radius: 10px;
+background-color: rgb(0, 189, 92);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="create_route_button">
+      <property name="geometry">
+       <rect>
+        <x>1280</x>
+        <y>710</y>
+        <width>561</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold Condensed</family>
+        <pointsize>24</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton#create_route_button {
+
+    background-color: rgb(0, 192, 92);
+    border-width: 1px;
+    border-radius: 20px;
+    border-color:  rgb(0, 192, 92);
+
+}</string>
+      </property>
+      <property name="text">
+       <string>Create Route</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="current_location_button">
+      <property name="geometry">
+       <rect>
+        <x>730</x>
+        <y>400</y>
+        <width>391</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold SemiConden</family>
+        <pointsize>20</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton#current_location_button {
+    background-color: rgb(0, 192, 92);
+    border-width: 1px;
+    border-radius: 20px;
+    border-color:  rgb(0, 192, 92);
+}</string>
+      </property>
+      <property name="text">
+       <string>Use current location</string>
+      </property>
+     </widget>
+     <zorder>label_destination_2</zorder>
+     <zorder>label_destination_3</zorder>
+     <zorder>label</zorder>
+     <zorder>label_2</zorder>
+     <zorder>button_cost</zorder>
+     <zorder>button_eco</zorder>
+     <zorder>label_destination</zorder>
+     <zorder>line_edit_destination</zorder>
+     <zorder>output_box</zorder>
+     <zorder>label_start</zorder>
+     <zorder>heading_box</zorder>
+     <zorder>line_edit_start</zorder>
+     <zorder>button_fastest</zorder>
+     <zorder>create_route_button</zorder>
+     <zorder>current_location_button</zorder>
+    </widget>
+    <widget class="QWidget" name="page_2">
+     <widget class="QLabel" name="logo">
+      <property name="geometry">
+       <rect>
+        <x>720</x>
+        <y>250</y>
+        <width>481</width>
+        <height>281</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>logo.jpg</pixmap>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="enter_button">
+      <property name="geometry">
+       <rect>
+        <x>770</x>
+        <y>550</y>
+        <width>401</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>14</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton#enter_button {
+
+    background-color: rgb(0, 192, 92);
+    border-width: 1px;
+    border-radius: 20px;
+    border-color:  rgb(0, 192, 92);
+
+}</string>
+      </property>
+      <property name="text">
+       <string>CLICK TO START</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
